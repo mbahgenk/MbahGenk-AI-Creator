@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MbahGenk AI Creator</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MbahGenk AI Creator</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- Splash Screen -->
-    <div id="splash-screen">
-        <img src="assets/splash.svg" alt="Splash Logo" class="splash-img">
-        <h2>MbahGenk AI Creator</h2>
-    </div>
+<div id="splash">
+    <img src="splash.svg" alt="Splash Logo" class="splash-logo">
+    <h1 class="title">MbahGenk AI Creator</h1>
+</div>
 
-    <!-- Main App -->
-    <div id="app" class="hidden fade-in">
-        <img class="logo" src="assets/logo.svg" alt="Logo">
+<script>
+    // Splash screen hilang setelah 1.5 detik
+    setTimeout(() => {
+        document.getElementById("splash").classList.add("hide");
+    }, 1500);
+</script>
 
-        <h1 class="title">MbahGenk AI Creator</h1>
-
-        <textarea id="prompt" placeholder="Tulis perintahmu di sini..."></textarea>
-
-        <button onclick="generate()">Buat Konten</button>
-
-        <div id="output"></div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
